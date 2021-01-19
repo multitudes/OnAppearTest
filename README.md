@@ -2,8 +2,6 @@
 
 
 This is my code below.
-(And I have the code on GitHub in case someone wants to play with it)
-https://github.com/multitudes/OnAppearTest
 
 I tried everything I could think of. Well everything which is in my conprehension of how SwiftUI works! I am really intrigued to know why this is not working.  
 At the beginning I used the onAppear modifier to start the animation but it would not stop even using conditionals inside it.
