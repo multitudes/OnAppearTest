@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
-	@AppStorage("isAnimating") var isAnimating: Bool = true
+	@State private var isAnimating: Bool = true
 	@State var showModal: Bool = false
 	@State private var animation = 0.0
-
+	
 	var body: some View {
 		Button {
 			print("Pressed")
@@ -32,20 +32,22 @@ struct ContentView: View {
 		)
 		.onAppear {
 			if isAnimating {  withAnimation(Animation.easeOut(duration: 1)
-							.repeatForever(autoreverses: false)) {
-								animation = 1
+												.repeatForever(autoreverses: false)) {
+				animation = 1
 			}
 			}
 		}
 		.sheet(isPresented: $showModal) {
-			ModalView()
+			ModalView(isAnimating: $isAnimating)
 		}
+		
+		
 	}
 }
 
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+	static var previews: some View {
+		ContentView()
+	}
 }
