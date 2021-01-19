@@ -11,22 +11,22 @@ struct ContentView: View {
 	@State private var isAnimating: Bool = true
 	@State var showModal: Bool = false
 	@State private var animation = 0.0
-	
+
 	var body: some View {
 		Button {
 			print("Pressed")
 			showModal = true
 		} label : {
-			Image(systemName: "star")
+			Image(systemName: "paperplane")
 		}
 		.padding()
-		.background(Color.blue).opacity(isAnimating ? 1 : 0.5)
+		.background(Color.red).opacity(isAnimating ? 1 : 0.5)
 		.clipShape(Circle())
 		.foregroundColor(.white)
 		.padding(4)
 		.overlay(
 			Circle()
-				.stroke(Color.blue, lineWidth: 2)
+				.stroke(Color.red, lineWidth: 2)
 				.scaleEffect(CGFloat(1+animation))
 				.opacity(1-animation)
 		)
@@ -40,8 +40,6 @@ struct ContentView: View {
 		.sheet(isPresented: $showModal) {
 			ModalView(isAnimating: $isAnimating)
 		}
-		
-		
 	}
 }
 
