@@ -12,7 +12,7 @@ struct ModalView: View {
 	@Environment(\.presentationMode) var presentation
 
 	var body: some View {
-		Text("Hello, World!").onTapGesture {
+		Text("Stop animation / activate animation").onTapGesture {
 			isAnimating.toggle()
 			presentation.wrappedValue.dismiss()
 		}
