@@ -1,6 +1,8 @@
-This is my code below.
-(And I have the code on GitHub in case someone wants to play with it)
-https://github.com/multitudes/OnAppearTest
+# Problem with Button - withAnimation - onAppear  - 
+## How do I stop and start a button animation from a modal view?
+
+
+This is my code below again.
 
 I tried everything I could think of. Well everything which is in my conprehension of how SwiftUI works!
 At the beginning I used the onAppear modifier to start the animation but it would not stop even using conditionals inside it.
